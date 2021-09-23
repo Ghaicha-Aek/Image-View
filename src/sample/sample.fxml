@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="filechooser" mnemonicParsing="false" onAction="#filechooserview" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: BLACK;">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/open-folder-icon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="zoomp" disable="true" mnemonicParsing="false" onAction="#zoomplus" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: BLACK;">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/Zoom-In-icon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="delete" disable="true" mnemonicParsing="false" onAction="#deleteview" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: BLACK;">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/ios12-iphone-x-mail-delete-messages-trash-icon-thumbnail_2x.png" />
+                            </image></ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="rotationd" disable="true" mnemonicParsing="false" onAction="#rotationdroite" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: BLACK;">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/rotate.png" />
+                            </image></ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="save" disable="true" mnemonicParsing="false" onAction="#saveview" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: BLACK;">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/save-icon-36513.png" />
+                            </image></ImageView>
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="rotationg" disable="true" mnemonicParsing="false" onAction="#rotationgauche" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: BLACK;">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/images.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Button>
+            <Button fx:id="zoomm" disable="true" minHeight="50.0" mnemonicParsing="false" onAction="#zoommoins" prefWidth="50.0" style="-fx-background-color: black;">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/téléchargement.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="filtre" disable="true" minHeight="50.0" mnemonicParsing="false" onAction="#filtre" prefWidth="50.0" style="-fx-background-color: black;">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/share-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="normal" disable="true" mnemonicParsing="false" onAction="#desfiltre" prefHeight="50.0" prefWidth="50.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <content>
+                <StackPane cache="true" cacheHint="SPEED" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: black;">
+                    <children>
+                        <ImageView fx:id="view" fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" />
+                    </children>
+                </StackPane>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
